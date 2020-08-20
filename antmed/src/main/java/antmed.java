@@ -35,7 +35,7 @@ public class antmed {
         streamContexts = new StreamContext[input_format_context.nb_streams()];
         for (int i = 0; i < input_format_context.nb_streams(); i++) {
             streamContexts[i] = new StreamContext();
-            //Input streamlerin decoderlarını buluyorum, zaten 2 tane var biri audio biri video için
+            //Input streamlerin decoderlarını buluyorum
             AVStream stream = input_format_context.streams(i);
             AVCodec decoder = avcodec.avcodec_find_decoder(stream.codecpar().codec_id());
 
